@@ -6,7 +6,7 @@
 #
 # https://github.com/P3TERX/Actions-OpenWrt
 # Description: Build OpenWrt using GitHub Actions
-#在run workflow中把SSH connection to Actions值改为true即可开启SSH，默认false为关闭SSH
+#
 
 name: x64
 
@@ -18,13 +18,9 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-# 开启SSH:在Run Workflow时把SSH connection to Actions的值改为true即可开启SSH链接,默认为关闭SSH
-#  schedule:
-#    - cron: 0 8 * * 5
-  watch:
-    types: started
+
 env:
-  REPO_URL: https://github.com/weweyes/lede
+  REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: x64.config
@@ -43,7 +39,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@main
 
     - name: Initialization environment
       env:
@@ -51,7 +47,7 @@ jobs:
       run: |
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq update
-        sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-1804)
+        sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-2004)
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
@@ -85,12 +81,9 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
-        
-        
-        rm -rf package/lean/luci-theme-argon
 
     - name: SSH connection to Actions
-      uses: weweyes/debugger-action@master
+      uses: P3TERX/ssh2actions@v1.0.0
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
       env:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -182,7 +175,7 @@ jobs:
         files: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs
-      uses: smallprogram/delete-workflow-runs@main
+      uses: GitRML/delete-workflow-runs@main
       with:
         retain_days: 1
         keep_minimum_runs: 3
