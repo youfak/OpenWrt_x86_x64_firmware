@@ -24,7 +24,7 @@ sed -i "s/OpenWrt /child build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" packag
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 
 #更换lede源码中自带argon主题
-sed -i 's/luci-theme-bootstrap/luci-theme-edge/g' ./feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci/Makefile
 rm -rf ./feeds/luci/luci-theme-argon
 
 #禁止Turbo ACC 网络加速修改net.bridge.bridge-nf-call-iptables的值为1(修改为1后旁路由需开启ip动态伪装，影响下行带宽)。
@@ -38,6 +38,7 @@ git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-th
 git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
 git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
+git clone -b 21.02 https://github.com/kenzok78/luci-theme-argonne package/luci-theme-argonne
 # Add luci-theme-argon
 #git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
