@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: build-openwrt-x64
+name: OpenWrt-lede5.15
 
 on:
   repository_dispatch:
