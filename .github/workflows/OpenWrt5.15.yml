@@ -135,7 +135,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt_5.15${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: 上传固件到NN网盘
@@ -167,15 +167,21 @@ jobs:
         echo "::set-output name=status::success"
 
     - name: 发布至release
-      uses: softprops/action-gh-release@v1
-      if: steps.tag.outputs.status == 'success' && !cancelled()
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      id: release
+      uses: ncipollo/release-action@v1
+      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
-        tag_name: ${{ steps.tag.outputs.release_tag }}
-        body_path: release.txt
-        files: ${{ env.FIRMWARE }}/*
-
+        name: ${{ env.FILE_TIME }} 「 openwrt-5.15-X86-64 」
+        allowUpdates: true
+        tag: ${{ env.TAG_TIME }}
+        commit: main
+        token: ${{ secrets.RELEASE_TOKEN }}
+        body: |
+          功能介绍：含Passwall、定时重拨等插件。其他应用可以自行在应用商店选择安装。
+          由衷感谢所有为openwrt无私奉献的大佬们
+          📥 固件下载
+          🔗 [国外WT网盘](${{ steps.wetransfer.outputs.url }})
+        artifacts: ${{ env.FIRMWARE }}/*
     - name: 清理旧的workflow
       uses: GitRML/delete-workflow-runs@main
       with:
