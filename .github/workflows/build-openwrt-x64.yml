@@ -156,7 +156,7 @@ jobs:
         echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
         echo "::set-output name=url::$(cat wetransfer.log | grep https | cut -f3 -d" ")"
 
-    - name: Generate release tag
+    - name: 创建release发布页
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
