@@ -19,6 +19,6 @@ sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=6.0/g' ./target/linux/x86/Makef
 
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-echo 'src-git small8 https://github.com/kenzok8/small-package' feeds.conf.default
+echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+echo 'src-git small8 https://github.com/kenzok8/small-package' >>feeds.conf.default
 echo 'src-git fw876 https://github.com/fw876/helloworld' >>feeds.conf.default
