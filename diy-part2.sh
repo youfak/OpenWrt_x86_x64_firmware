@@ -38,7 +38,7 @@ git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package
 git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
 git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
 git clone -b 21.02 https://github.com/kenzok78/luci-theme-argonne package/luci-theme-argonne
-git clone https://github.com/thinktip/luci-theme-neobird.git package/luci-theme-argonne
+git clone https://github.com/thinktip/luci-theme-neobird.git package/luci-theme-neobird
 
 # Modify hostname
 #sed -i 's/OpenWrt/OpenWrt/g' package/base-files/files/bin/config_generate
