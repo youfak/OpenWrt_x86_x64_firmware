@@ -26,7 +26,10 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 #更换lede源码中自带argon主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci/Makefile
 rm -rf ./feeds/luci/luci-theme-argon
-rm -rf ./feeds/luci-theme-neobird  
+rm -rf ./feeds/luci-theme-neobird
+
+# 删除自带的adguardhome
+rm -rf ./feeds/packages/net/adguardhome
 
 #禁止Turbo ACC 网络加速修改net.bridge.bridge-nf-call-iptables的值为1(修改为1后旁路由需开启ip动态伪装，影响下行带宽)。
 #sed -i '/exit 0/i sed -i "s/\\[ -d \\/sys\\/kernel\\/debug\\/ecm\\/ecm_nss_ipv4 \\] \\&\\& return 0/\\[ -d \\/sys\\/kernel\\/debug\\/ecm\\/ecm_nss_ipv4 \\] \\&\\& return 1/g" /etc/init.d/qca-nss-ecm'  package/lean/default-settings/files/zzz-default-settings
