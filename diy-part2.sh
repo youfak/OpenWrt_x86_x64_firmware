@@ -9,7 +9,7 @@
 #============================================================
 
 # 修改默认IP
-sed -i 's/192.168.1.1/192.168.99.101/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.99.1/g' package/base-files/files/bin/config_generate
 
 # 路由器设置密码为空
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
