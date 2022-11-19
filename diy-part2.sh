@@ -45,8 +45,8 @@ git clone -b 21.02 https://github.com/kenzok78/luci-theme-argonne package/luci-t
 git clone https://github.com/thinktip/luci-theme-neobird.git package/luci-theme-neobird
 
 # 添加指定 adguardhome
-svn co https://github.com/kiddin9/openwrt-packages/tree/master/adguardhome  feeds/packages/net/adguardhome
-svn co https://github.com/kiddin9/openwrt-packages/tree/master/luci-app-adguardhome package/luci-app-adguardhome
+svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome  feeds/packages/net/adguardhome
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome package/feeds/kenzo/luci-app-adguardhome
 
 # Modify hostname
 #sed -i 's/OpenWrt/OpenWrt/g' package/base-files/files/bin/config_generate
