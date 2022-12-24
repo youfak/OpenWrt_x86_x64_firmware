@@ -31,5 +31,9 @@ lean源码版本，内核为***5.10***版、***5.15***、***6.0***版
 > `管理ip：192.168.99.1 密码：为空`
 
 ### 固件分区默认128M+1024mb,分区一致可直接web升级，否则请使用DD写盘或重新写盘，首次刷入不建议保留配置，以免发生BUG。
-![image](https://user-images.githubusercontent.com/27138744/209439268-dffd943d-753c-425f-a0a8-d743f942cff2.png)
+![image](https://user-images.githubusercontent.com/27138744/209439294-6532db0d-8ffb-4bc7-950a-e1535b4861d4.png)
+![image](https://user-images.githubusercontent.com/27138744/209439304-c3004851-c360-4695-a5c6-930618902122.png)
+![image](https://user-images.githubusercontent.com/27138744/209439320-04f2a7f3-d084-4c98-97b5-518ae6aa41ca.png)
+
+
 
