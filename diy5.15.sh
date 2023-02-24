@@ -21,3 +21,5 @@ sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=5.15/g' ./target/linux/x86/Make
 echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 echo 'src-git small8 https://github.com/kenzok8/small-package' >>feeds.conf.default
 echo 'src-git fw876 https://github.com/fw876/helloworld' >>feeds.conf.default
+echo 'git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  package/luci-theme-argon-18.06'
+echo 'git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge'
