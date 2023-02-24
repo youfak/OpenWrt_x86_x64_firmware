@@ -43,6 +43,8 @@ git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-th
 git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
 git clone -b 21.02 https://github.com/kenzok78/luci-theme-argonne package/luci-theme-argonne
 git clone https://github.com/thinktip/luci-theme-neobird.git package/luci-theme-neobird
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  package/luci-theme-argon-18.06
+git clone -b master https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
 
 # 添加指定 adguardhome
 svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome  feeds/packages/net/adguardhome
