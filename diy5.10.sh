@@ -27,11 +27,7 @@ sed -i '$a src-git fw876 https://github.com/fw876/helloworld' feeds.conf.default
 # sed -i '$a src-git kiddin9 https://github.com/kiddin9/openwrt-packages' feeds.conf.default
 
 # 使用自定义主题
-git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
-# git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
-# git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
+# git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom #该主题有问题，不要使用(不支持商店)
 git clone -b 21.02 https://github.com/kenzok78/luci-theme-argonne package/luci-theme-argonne
-# git clone https://github.com/thinktip/luci-theme-neobird.git package/luci-theme-neobird
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  package/luci-theme-argon-18.06
 git clone -b master https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
-
