@@ -34,6 +34,9 @@ lean源码版本，内核为***5.10***版、***5.15***、***6.0***版
 ![image](https://user-images.githubusercontent.com/27138744/218228804-a7a128ce-671a-4abd-a97e-8a33b90fd5bd.png)
 ![image](https://user-images.githubusercontent.com/27138744/209439304-c3004851-c360-4695-a5c6-930618902122.png)
 ![image](https://user-images.githubusercontent.com/27138744/209439320-04f2a7f3-d084-4c98-97b5-518ae6aa41ca.png)
+## 5.10只有如下插件
+![image](https://user-images.githubusercontent.com/27138744/221386973-56c176f5-6672-4dca-88b4-e9de21627a36.png)
+
 
 
 
