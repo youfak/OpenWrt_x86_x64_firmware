@@ -27,8 +27,6 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci/Makefile
 rm -rf ./feeds/luci/luci-theme-argon
 rm -rf ./feeds/luci-theme-neobird
-rm -rf ./feeds/luci/luci-theme-argone
-rm -rf ./feeds/luci-theme-argonne
 
 # 删除自带的adguardhome
 # rm -rf ./feeds/packages/net/adguardhome
