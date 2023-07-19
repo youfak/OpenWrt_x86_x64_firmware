@@ -29,8 +29,8 @@ rm -rf ./feeds/luci/luci-theme-argon
 rm -rf ./feeds/luci-theme-neobird
 
 # 删除自带的adguardhome
-rm -rf ./feeds/packages/net/adguardhome
-rm -rf ./package/feeds/kenzo/luci-app-adguardhome
+# rm -rf ./feeds/packages/net/adguardhome
+# rm -rf ./package/feeds/kenzo/luci-app-adguardhome
 
 #禁止Turbo ACC 网络加速修改net.bridge.bridge-nf-call-iptables的值为1(修改为1后旁路由需开启ip动态伪装，影响下行带宽)。
 #sed -i '/exit 0/i sed -i "s/\\[ -d \\/sys\\/kernel\\/debug\\/ecm\\/ecm_nss_ipv4 \\] \\&\\& return 0/\\[ -d \\/sys\\/kernel\\/debug\\/ecm\\/ecm_nss_ipv4 \\] \\&\\& return 1/g" /etc/init.d/qca-nss-ecm'  package/lean/default-settings/files/zzz-default-settings
@@ -40,8 +40,8 @@ rm -rf ./package/feeds/kenzo/luci-app-adguardhome
 # themes添加（svn co 命令意思：指定版本如https://github）
 
 # 添加指定 adguardhome
-svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome  feeds/packages/net/adguardhome
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome package/feeds/kenzo/luci-app-adguardhome
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome  feeds/packages/net/adguardhome
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome package/feeds/kenzo/luci-app-adguardhome
 
 # Modify hostname
 #sed -i 's/OpenWrt/OpenWrt/g' package/base-files/files/bin/config_generate
