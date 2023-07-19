@@ -11,7 +11,7 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 # 指定编译版本
-sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=5.15/g' ./target/linux/x86/Makefile
+sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.15/g' ./target/linux/x86/Makefile
 
 # 使用自定义openclash
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
@@ -28,6 +28,7 @@ sed -i '$a src-git fw876 https://github.com/fw876/helloworld' feeds.conf.default
 
 # 使用自定义主题
 # git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom #该主题有问题，不要使用(不支持商店)
-git clone https://github.com/kenzok78/luci-theme-argonne package/luci-theme-argonne
+# git clone https://github.com/kenzok78/luci-theme-argonne package/luci-theme-argonne
+git clone -b 23 https://github.com/kenzok78/luci-theme-argone
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  package/luci-theme-argon-18.06
 git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
