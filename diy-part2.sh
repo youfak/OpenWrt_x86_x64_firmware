@@ -24,7 +24,7 @@ sed -i "s/OpenWrt /Child build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" packag
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 
 #更换lede源码中自带argon主题
-sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' ./feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' ./feeds/luci/collections/luci/Makefile
 rm -rf ./feeds/luci/luci-theme-argon
 rm -rf ./feeds/luci-theme-neobird
 
