@@ -6,7 +6,7 @@ P3TERX云编译脚本地址：[https://github.com/P3TERX/Actions-OpenWrt](https:
 
 lean固件源码地址：[https://github.com/coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)
 
-插件引用：[luci-theme-argon](https://github.com/jerrykuku/luci-theme-argon.git)、[luci-theme-neobird](https://github.com/thinktip/luci-theme-neobird.git)、[openwrt-passwall](https://github.com/xiaorouji/openwrt-passwall.git)、[OpenClash](https://github.com/vernesong/OpenClash.git)、[istore](https://github.com/linkease/istore.git)。
+插件引用：[luci-theme-argon](https://github.com/jerrykuku/luci-theme-argon.git)、[istore](https://github.com/linkease/istore.git)。
 
 由衷感谢所有为openwrt无私奉献的大佬们。
 
