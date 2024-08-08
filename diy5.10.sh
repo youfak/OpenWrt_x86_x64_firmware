@@ -11,8 +11,7 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 # 5.10 完全纯净版 不包含任何插件
 # 指定编译版本
-sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.10/g' ./target/linux/x86/Makefile
-sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.10/g' ./target/linux/x86/Makefile
+sed -i 's/KERNEL_PATCHVER:=\([0-9]\+\)\.\([0-9]\+\)/KERNEL_PATCHVER:=5.10/g' ./target/linux/x86/Makefile
 
 # 使用自定义openclash 5.10.config 没有这个插件
 # svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
